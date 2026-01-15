@@ -54,7 +54,7 @@ void addEdge(Graph* graph, int s, int d) {
 
 void printGraph(Graph* graph) {
     cout << "\n";
-    for (int v = 0; v < graph->y; v++) { 
+    for (int v = 1; v < graph->y; v++) { 
         Node* t = graph->list[v];
         cout << v << " ---> ";
         while (t) {
@@ -68,15 +68,22 @@ void printGraph(Graph* graph) {
 
 int main() {
    
-    struct Graph* dothi = createGraph(4, 1);
+    struct Graph* dothi = createGraph(11, 0);
 
     
-    addEdge(dothi, 0, 1);
-    addEdge(dothi, 0, 2);
     addEdge(dothi, 1, 2);
+    addEdge(dothi, 1, 6);
+    addEdge(dothi, 1, 7);
+    addEdge(dothi, 1, 8);
+    addEdge(dothi, 1, 9);
+    addEdge(dothi, 1, 10);
+    addEdge(dothi, 10, 11);
+    addEdge(dothi, 11, 2);
     addEdge(dothi, 2, 3);
     addEdge(dothi, 3, 4);
-    addEdge(dothi, 4, 2);
+    addEdge(dothi, 4, 5);
+    addEdge(dothi, 4, 6);
+    addEdge(dothi, 5, 6);
 
     printGraph(dothi);
 
